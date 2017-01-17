@@ -53,7 +53,7 @@ public class MainTest {
 		String password = "123";
 		User user = service.checkLogin(name, password);
 		System.out.println(user);
-		
+		System.out.println("user:"+user);
 		
 	}
 	
