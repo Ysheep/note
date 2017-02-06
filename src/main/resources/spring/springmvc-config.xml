@@ -21,8 +21,8 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 	
 	
-	
-	
+	<context:component-scan base-package="cn.tarena.note.web"/>
+	<mvc:annotation-driven/>
 	
 	
 	
