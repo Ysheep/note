@@ -12,6 +12,7 @@ import cn.tarena.note.util.NameOrPasswordException;
 @Service("userService")
 public class UserServiceImpl implements UserService {
 
+	private static final long serialVersionUID = 1L;
 	@Resource
 	UserMapper userMapper;
 	
