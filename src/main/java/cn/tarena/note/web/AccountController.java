@@ -26,6 +26,7 @@ public class AccountController {
 			return new JsonResult<User>(user);
 		} catch (NameOrPasswordException e) {
 			e.printStackTrace();
+			System.out.println(e.getMessage()+","+e.getField());
 			return new JsonResult<User>(e.getField(),e.getMessage(),null);
 		}
 	}
