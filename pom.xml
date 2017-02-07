@@ -8,7 +8,7 @@
   <name>note Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-    <dependency>
+  <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
         <version>3.2.8.RELEASE</version>
@@ -64,9 +64,9 @@
         <version>3.2.8.RELEASE</version>
     </dependency>
     <dependency>
-  <groupId>org.aspectj</groupId>
-  <artifactId>aspectjweaver</artifactId>
-  <version>1.8.2</version>
+	<groupId>org.aspectj</groupId>
+	<artifactId>aspectjweaver</artifactId>
+	<version>1.7.4</version>
 </dependency>
   </dependencies>
   <build>

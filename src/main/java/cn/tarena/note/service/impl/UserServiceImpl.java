@@ -18,20 +18,21 @@ public class UserServiceImpl implements UserService {
 	public User checkLogin(String name, String password) {
 		//入口参数检查
 		if(name == null || name.trim().isEmpty()) {
-			throw new NameOrPasswordException("用户名不能为空");
+			throw new NameOrPasswordException(1,"用户名不能为空");
 		}
 		if(password == null || password.trim().isEmpty()) {
-			throw new NameOrPasswordException("密码不能为空");
+			throw new NameOrPasswordException(2,"密码不能为空");
 		}
 		//从数据层查询用户的信息
 		User user = userMapper.findUserByName(name);
+		System.out.println(user);
 		if(user==null) {
-			throw new NameOrPasswordException("用户名或者密码错误");
+			throw new NameOrPasswordException(1,"用户名错误");
 		}
 		if(user.getPassword().equals(password)) {
 			return user;
 		}
-		throw new NameOrPasswordException("用户名那个或者密码错误");
+		throw new NameOrPasswordException(2,"密码错误");
 	}
 
 }

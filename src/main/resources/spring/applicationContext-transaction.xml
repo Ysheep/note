@@ -34,7 +34,6 @@
 			<tx:method name="find*" read-only="true"/>
 			<tx:method name="get*" read-only="true"/>
 			<tx:method name="view*" read-only="true"/>
-			
 			<tx:method name="*" read-only="true"/>
 		</tx:attributes>
 	</tx:advice>

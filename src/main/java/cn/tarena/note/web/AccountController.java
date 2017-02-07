@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import cn.tarena.note.pojo.User;
 import cn.tarena.note.service.UserService;
 import cn.tarena.note.util.JsonResult;
+import cn.tarena.note.util.NameOrPasswordException;
 
 @Controller
-//@RequestMapping("/account")
+@RequestMapping("/account")
 public class AccountController {
 	
 	@Resource
@@ -23,8 +24,9 @@ public class AccountController {
 		try {
 			User user = userService.checkLogin(name, password);
 			return new JsonResult<User>(user);
-		} catch (Exception e) {
-			return new JsonResult<User>(e);
+		} catch (NameOrPasswordException e) {
+			e.printStackTrace();
+			return new JsonResult<User>(e.getField(),e.getMessage(),null);
 		}
 	}
 }
